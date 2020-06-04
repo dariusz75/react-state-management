@@ -1,0 +1,12 @@
+App.tsx
+    1. We will create the Auth context that will pass the auth state from this component 
+    to any other component that requires it. 
+    export const AuthContext = React.createContext();
+
+    2. Then we add the useReducer hook to handle our authentication state, 
+    and conditionally render either the Login component or the Home component.
+    const [state, dispatch] = React.useReducer(reducer, initialState);
+    
+    useReducer hook takes two parameters, a reducer (which is simply a function 
+    that takes in state and action as parameters and returns a new state based on an action) 
+    and an initial state which will be passed into the reducer.
